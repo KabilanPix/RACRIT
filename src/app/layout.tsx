@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Landing Page",
-  description: "A professional portfolio landing page built with Next.js and Tailwind CSS.",
+  title: "RACRIT",
+  description: "The official website of Rotaract Club of Rajalakshmi Institute of Technology (RACRIT).",
 };
 
 export default function RootLayout({
