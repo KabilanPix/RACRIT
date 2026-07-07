@@ -82,7 +82,7 @@ export default function Hero() {
           </div>
         </h1>
         
-        <p className="text-lg md:text-xl text-text-light max-w-6xl mb-12 leading-relaxed">
+        <p className="text-sm md:text-base text-text-light max-w-6xl mb-12 leading-relaxed">
           The Rotaract Club of Rajalakshmi Institute of Technology is sponsored by the Rotary Club of Chennai Gateway and functions under Rotary International District 3233 – Group 5. Dedicated to service, leadership, fellowship, and professional development, our club strives to create a meaningful impact through its initiatives.
         </p>
       </div>
