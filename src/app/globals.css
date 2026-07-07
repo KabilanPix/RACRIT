@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: #0a0a0a;
+  --color-surface: #111111;
+  --color-dark: #000000;
+  --color-dark-light: #1a1a1a;
+  --color-accent: #2BEE34;
+  --color-accent-hover: #22c729;
+  --color-text-dark: #ffffff;
+  --color-text-light: #a3a3a3;
+  --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text-dark);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom glow utilities for the new UI */
+.glow-bg {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.glow-purple {
+  background: radial-gradient(circle, rgba(139,92,246,0.4) 0%, rgba(139,92,246,0) 70%);
+}
+.glow-blue {
+  background: radial-gradient(circle, rgba(59,130,246,0.4) 0%, rgba(59,130,246,0) 70%);
+}
+.glow-orange {
+  background: radial-gradient(circle, rgba(249,115,22,0.3) 0%, rgba(249,115,22,0) 70%);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float 8s ease-in-out 2s infinite;
+}
+.animate-float-fast {
+  animation: float 5s ease-in-out 1s infinite;
 }
