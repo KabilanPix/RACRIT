@@ -45,7 +45,7 @@ export default function Hero() {
   }, [reducedMotion, isLoaderDone]);
 
   // Easing used by premium sites (e.g. GSAP custom ease)
-  const customEase = [0.16, 1, 0.3, 1];
+  const customEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   return (
     <>
