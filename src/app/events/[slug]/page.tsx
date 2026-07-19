@@ -44,8 +44,15 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
       </Link>
       
       <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 lg:p-12 backdrop-blur-md shadow-2xl">
-        <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-10 border border-white/20">
-          <Image src={event.posterImage} alt={event.title} fill className="object-contain" />
+        <div className="w-full mb-10">
+          <Image 
+            src={event.posterImage} 
+            alt={event.title} 
+            width={0} 
+            height={0} 
+            sizes="100vw" 
+            className="w-full h-auto rounded-xl border border-white/20 shadow-xl" 
+          />
         </div>
         
         <div className="flex flex-col gap-4">
@@ -81,12 +88,14 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
 
                 return (
                   <div key={idx} className={`flex flex-col gap-8 lg:gap-16 items-center ${isImageRight ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
-                    <div className="w-full lg:w-1/2 relative aspect-video lg:aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-xl group">
+                    <div className="w-full lg:w-1/2 group">
                       <Image 
                         src={photo} 
                         alt={`${event.title} detail photo`} 
-                        fill 
-                        className="object-contain group-hover:scale-105 transition-transform duration-700" 
+                        width={0} 
+                        height={0} 
+                        sizes="100vw" 
+                        className="w-full h-auto rounded-xl border border-white/10 shadow-xl group-hover:scale-105 transition-transform duration-700" 
                       />
                     </div>
                     <div className="w-full lg:w-1/2 prose prose-invert max-w-none text-lg md:text-xl leading-relaxed text-gray-300 whitespace-pre-wrap">
@@ -103,12 +112,14 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
               <h2 className="text-2xl font-bold mb-6 text-white">More Photos</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {event.galleryPhotos.slice(event.fullContent.split(/\n\n+/).length - 1).map((photo, index) => (
-                  <div key={index} className="relative w-full aspect-square rounded-xl overflow-hidden border border-white/10 hover:border-accent/50 transition-colors group">
+                  <div key={index} className="w-full group">
                     <Image 
                       src={photo} 
                       alt={`${event.title} additional photo ${index + 1}`} 
-                      fill 
-                      className="object-contain group-hover:scale-110 transition-transform duration-500"
+                      width={0} 
+                      height={0} 
+                      sizes="100vw" 
+                      className="w-full h-auto rounded-xl border border-white/10 hover:border-accent/50 transition-colors group-hover:scale-105 duration-500 shadow-lg"
                     />
                   </div>
                 ))}
