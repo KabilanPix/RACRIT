@@ -24,10 +24,10 @@ export default async function MembersPage() {
             {coreMembers.map((member, i) => (
               <div key={i} data-aos="fade-up" data-aos-delay={(i % 4) * 100}>
                 <div 
-                  className="bg-[#1a1a1a]/60 backdrop-blur-xl transform-gpu border border-white/10 rounded-2xl p-6 hover:bg-[#2a2a2a]/80 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] hover:border-white/30 cursor-pointer group shadow-lg relative overflow-hidden h-full"
+                  className="bg-[#1a1a1a]/60 backdrop-blur-xl transform-gpu border border-white/10 rounded-2xl p-4 md:p-6 hover:bg-[#2a2a2a]/80 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] hover:border-white/30 cursor-pointer group shadow-lg relative overflow-hidden h-full"
                 >
-                  <h3 className="text-lg font-bold text-white group-hover:text-yellow-400 transition-colors relative z-10">{member.name}</h3>
-                  <p className="text-sm text-text-light mt-2 font-medium">{member.role}</p>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white group-hover:text-yellow-400 transition-colors relative z-10">{member.name}</h3>
+                  <p className="text-xs sm:text-sm text-text-light mt-1 md:mt-2 font-medium">{member.role}</p>
                 </div>
               </div>
             ))}
@@ -43,10 +43,10 @@ export default async function MembersPage() {
             {boardMembers.map((member, i) => (
               <div key={i} data-aos="fade-up" data-aos-delay={(i % 4) * 100}>
                 <div 
-                  className="bg-[#1a1a1a]/60 backdrop-blur-xl transform-gpu border border-white/10 rounded-2xl p-6 hover:bg-[#2a2a2a]/80 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:border-white/30 cursor-pointer group shadow-lg relative overflow-hidden h-full"
+                  className="bg-[#1a1a1a]/60 backdrop-blur-xl transform-gpu border border-white/10 rounded-2xl p-4 md:p-6 hover:bg-[#2a2a2a]/80 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:border-white/30 cursor-pointer group shadow-lg relative overflow-hidden h-full"
                 >
-                  <h3 className="text-lg font-bold text-white group-hover:text-accent transition-colors relative z-10">{member.name}</h3>
-                  <p className="text-sm text-text-light mt-2 font-medium">{member.role}</p>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white group-hover:text-accent transition-colors relative z-10">{member.name}</h3>
+                  <p className="text-xs sm:text-sm text-text-light mt-1 md:mt-2 font-medium">{member.role}</p>
                 </div>
               </div>
             ))}
@@ -62,10 +62,10 @@ export default async function MembersPage() {
             {greenRotaractors.map((member, i) => (
               <div key={i} data-aos="fade-up" data-aos-delay={(i % 2) * 100}>
                 <div 
-                  className="bg-[#1a1a1a]/60 backdrop-blur-xl transform-gpu border border-white/10 rounded-2xl p-6 hover:bg-[#2a2a2a]/80 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:border-white/30 cursor-pointer group shadow-lg relative overflow-hidden h-full"
+                  className="bg-[#1a1a1a]/60 backdrop-blur-xl transform-gpu border border-white/10 rounded-2xl p-4 md:p-6 hover:bg-[#2a2a2a]/80 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:border-white/30 cursor-pointer group shadow-lg relative overflow-hidden h-full"
                 >
-                  <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors relative z-10">{member.name}</h3>
-                  <p className="text-sm text-text-light mt-2 font-medium">{member.role}</p>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-bold text-white group-hover:text-green-400 transition-colors relative z-10">{member.name}</h3>
+                  <p className="text-xs sm:text-sm text-text-light mt-1 md:mt-2 font-medium">{member.role}</p>
                 </div>
               </div>
             ))}
