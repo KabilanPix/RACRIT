@@ -12,8 +12,9 @@ const LinkedinIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="w-full px-4 md:px-8 py-16 border-t border-white/5 relative z-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12" data-aos="fade-up">
+    <div className="w-full p-4 md:p-8 mt-16">
+      <footer className="w-full max-w-7xl mx-auto px-8 md:px-12 py-12 md:py-16 bg-[#050505]/80 backdrop-blur-2xl border border-white/10 rounded-[2rem] relative z-10 shadow-2xl">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12" data-aos="fade-up">
         
         {/* Left Side: Brand */}
         <div className="flex flex-col max-w-sm">
@@ -54,13 +55,10 @@ export default function Footer() {
         
       </div>
       
-      <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between text-xs text-text-light/50">
+      <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-center text-xs text-text-light/50">
         <p>© {new Date().getFullYear()} Rotaract Club of RIT. All rights reserved.</p>
-        <div className="flex gap-6 mt-4 md:mt-0">
-          <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-        </div>
       </div>
-    </footer>
+      </footer>
+    </div>
   );
 }

@@ -10,6 +10,19 @@
   --color-text-dark: #ffffff;
   --color-text-light: #a3a3a3;
   --font-sans: var(--font-inter);
+  
+  /* Fluid Typography Overrides */
+  --text-xs: clamp(0.7rem, 0.7rem + 0.1vw, 0.75rem);
+  --text-sm: clamp(0.75rem, 0.75rem + 0.2vw, 0.875rem);
+  --text-base: clamp(0.875rem, 0.85rem + 0.3vw, 1rem);
+  --text-lg: clamp(1rem, 0.95rem + 0.4vw, 1.125rem);
+  --text-xl: clamp(1.125rem, 1.05rem + 0.5vw, 1.25rem);
+  --text-2xl: clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
+  --text-3xl: clamp(1.5rem, 1.35rem + 0.8vw, 1.875rem);
+  --text-4xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem);
+  --text-5xl: clamp(2rem, 1.7rem + 1.8vw, 3rem);
+  --text-6xl: clamp(2.5rem, 2rem + 2.5vw, 3.75rem);
+  --text-7xl: clamp(3rem, 2.5rem + 3.5vw, 4.5rem);
 }
 
 body {
@@ -52,4 +65,24 @@ body {
 }
 .animate-float-fast {
   animation: float 5s ease-in-out 1s infinite;
+}
+
+/* Custom Ping-Pong animation for the TopLoader */
+#nprogress .bar {
+  width: 30% !important;
+  animation: nprogress-ping-pong 1.2s infinite ease-in-out !important;
+  transform: none !important;
+}
+#nprogress .peg {
+  display: none !important;
+}
+
+@keyframes nprogress-ping-pong {
+  0% { left: 0%; transform: translateX(0%); }
+  50% { left: 100%; transform: translateX(-100%); }
+  100% { left: 0%; transform: translateX(0%); }
+}
+
+.font-perandory {
+  font-family: var(--font-perandory), sans-serif !important;
 }

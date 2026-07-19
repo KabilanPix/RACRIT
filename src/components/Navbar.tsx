@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="w-full flex items-center justify-between px-4 md:px-8 py-6 bg-transparent border-b border-white/5 relative z-50">
       <div className="flex items-center">
         <Link href="/">
-          <Image src="/logo.png" alt="Rotaract RIT Logo" width={360} height={80} className="object-contain -my-5 max-w-[240px] sm:max-w-none cursor-pointer" priority quality={100} />
+          <Image src="/logo.png" alt="Rotaract RIT Logo" width={360} height={80} className="object-contain h-auto -my-5 max-w-[240px] sm:max-w-none cursor-pointer" priority quality={100} />
         </Link>
       </div>
       

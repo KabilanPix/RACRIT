@@ -19,8 +19,8 @@ export default function Features() {
         </div>
         
         <div className="w-full md:w-1/2 flex items-center justify-center relative" data-aos="fade-up" data-aos-delay="200">
-          <div className="relative w-full max-w-md aspect-video bg-surface rounded-2xl border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden z-10 backdrop-blur-sm">
-             <Image src="/Feature_1.png" alt="Feature 1" fill className="object-cover" />
+          <div className="relative w-full max-w-md aspect-video bg-[#1a1a1a]/80 rounded-2xl border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden z-10 backdrop-blur-xl transform-gpu">
+             <Image src="/Feature_1.png" alt="Feature 1" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
           </div>
           {/* Decorative shapes behind image */}
           <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-gradient-to-tr from-purple-500 to-blue-500 rounded-full blur-2xl opacity-50 z-0"></div>
@@ -33,8 +33,8 @@ export default function Features() {
         
         <div className="w-full md:w-1/2 flex items-center justify-center order-2 md:order-1 relative" data-aos="fade-up" data-aos-delay="100">
           <div className="absolute -left-8 -top-8 w-40 h-40 bg-gradient-to-br from-blue-500 to-accent rounded-full blur-3xl opacity-30 z-0"></div>
-          <div className="relative w-full max-w-md aspect-video bg-surface rounded-2xl border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden z-10 backdrop-blur-sm">
-             <Image src="/Community_feature_2.png" alt="Community Feature" fill className="object-cover" />
+          <div className="relative w-full max-w-md aspect-video bg-[#1a1a1a]/80 rounded-2xl border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden z-10 backdrop-blur-xl transform-gpu">
+             <Image src="/Community_feature_2.png" alt="Community Feature" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
           </div>
         </div>
 

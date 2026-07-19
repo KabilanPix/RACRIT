@@ -1,24 +1,11 @@
 import React from "react";
+import prisma from "@/lib/prisma";
 
-export default function Team() {
-  const teamMembers = [
-    {
-      name: "[President Name]",
-      role: "President — Leading the club's vision and direction",
-    },
-    {
-      name: "[Secretary Name]",
-      role: "Secretary — Managing club operations and records",
-    },
-    {
-      name: "[Treasurer Name]",
-      role: "Treasurer — Overseeing club finances and budgeting",
-    },
-    {
-      name: "[Joint Secretary Name]",
-      role: "Joint Secretary — Supporting event execution and reporting",
-    },
-  ];
+export default async function Team() {
+  const teamMembers = await prisma.member.findMany({
+    where: { category: "TEAM_PLACEHOLDER" },
+    orderBy: { id: "asc" }
+  });
 
   return (
     <section className="w-full text-white py-24 border-b border-white/5 relative overflow-hidden">

@@ -41,14 +41,14 @@ export default function Services() {
           We focus on five avenues of service, building leadership, community impact, and global fellowship among students.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 border-t border-l border-white/10 rounded-xl overflow-hidden bg-surface/30 backdrop-blur-md">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-0 border-t border-l border-white/10 rounded-xl overflow-hidden bg-[#1a1a1a]/60 backdrop-blur-xl transform-gpu">
           {services.map((service, index) => (
-            <div key={index} data-aos="fade-up" data-aos-delay={index * 100} className="flex flex-col items-center justify-center p-6 border-r border-b border-white/10 hover:bg-white/5 transition-colors group">
-              <div className="mb-4 p-4 rounded-2xl bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:scale-110 transition-transform">
+            <div key={index} data-aos="fade-up" data-aos-delay={index * 100} className={`flex flex-col items-center text-center justify-start p-4 sm:p-6 border-r border-b border-white/10 hover:bg-white/5 transition-colors group ${index === 4 ? 'col-span-2 lg:col-span-1' : ''}`}>
+              <div className="mb-3 sm:mb-4 p-3 sm:p-4 rounded-2xl bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:scale-110 transition-transform">
                 {service.icon}
               </div>
-              <h3 className="font-semibold text-lg mb-2">{service.name}</h3>
-              <p className="text-sm text-text-light">{service.desc}</p>
+              <h3 className="font-semibold text-sm sm:text-lg mb-1 sm:mb-2">{service.name}</h3>
+              <p className="text-[10px] sm:text-sm text-text-light leading-relaxed">{service.desc}</p>
             </div>
           ))}
         </div>

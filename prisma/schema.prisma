@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Member {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String
+  category  String   // "BOARD", "GREEN_ROTARACTOR", "TEAM_PLACEHOLDER" etc.
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Event {
+  id               Int      @id @default(autoincrement())
+  slug             String   @unique
+  title            String
+  shortDescription String
+  date             String
+  category         String
+  posterImage      String
+  fullContent      String   @db.Text
+  galleryPhotos    String[] @default([])
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
