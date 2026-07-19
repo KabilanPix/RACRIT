@@ -45,7 +45,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
       
       <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 lg:p-12 backdrop-blur-md shadow-2xl">
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-10 border border-white/20">
-          <Image src={event.posterImage} alt={event.title} fill className="object-cover" />
+          <Image src={event.posterImage} alt={event.title} fill className="object-contain" />
         </div>
         
         <div className="flex flex-col gap-4">
@@ -86,7 +86,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                         src={photo} 
                         alt={`${event.title} detail photo`} 
                         fill 
-                        className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                        className="object-contain group-hover:scale-105 transition-transform duration-700" 
                       />
                     </div>
                     <div className="w-full lg:w-1/2 prose prose-invert max-w-none text-lg md:text-xl leading-relaxed text-gray-300 whitespace-pre-wrap">
@@ -108,7 +108,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                       src={photo} 
                       alt={`${event.title} additional photo ${index + 1}`} 
                       fill 
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-contain group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                 ))}
