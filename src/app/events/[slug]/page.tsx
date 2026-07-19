@@ -11,7 +11,7 @@ const renderFormattedText = (text: string) => {
   const parts = text.split(/\*\*(.*?)\*\*/g);
   return parts.map((part, index) => {
     if (index % 2 === 1) {
-      return <strong key={index} className="font-bold text-white text-xl">{part}</strong>;
+      return <strong key={index} className="font-bold text-white text-lg">{part}</strong>;
     }
     return <React.Fragment key={index}>{part}</React.Fragment>;
   });
@@ -63,8 +63,8 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
             <span className="text-text-light text-sm font-medium">{event.date}</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">{event.title}</h1>
-          <p className="text-xl md:text-2xl text-accent/90">{event.shortDescription}</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">{event.title}</h1>
+          <p className="text-lg md:text-xl text-accent/90">{event.shortDescription}</p>
           
           <div className="w-full h-px bg-white/10 my-8"></div>
           
@@ -78,7 +78,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                 
                 if (!photo) {
                   return (
-                    <div key={idx} className="prose prose-invert max-w-none text-lg md:text-xl leading-relaxed text-gray-300 whitespace-pre-wrap w-full">
+                    <div key={idx} className="prose prose-invert max-w-none text-base md:text-lg leading-relaxed text-gray-300 whitespace-pre-wrap w-full">
                       {renderFormattedText(text)}
                     </div>
                   );
@@ -98,7 +98,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
                         className="w-full h-auto rounded-xl border border-white/10 shadow-xl group-hover:scale-105 transition-transform duration-700" 
                       />
                     </div>
-                    <div className="w-full lg:w-1/2 prose prose-invert max-w-none text-lg md:text-xl leading-relaxed text-gray-300 whitespace-pre-wrap">
+                    <div className="w-full lg:w-1/2 prose prose-invert max-w-none text-base md:text-lg leading-relaxed text-gray-300 whitespace-pre-wrap">
                       {renderFormattedText(text)}
                     </div>
                   </div>
