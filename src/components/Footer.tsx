@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
         
         {/* Right Side: Links */}
-        <div className="flex gap-16">
+        <div className="flex flex-col sm:flex-row gap-10 sm:gap-16">
           <div>
             <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="flex flex-col gap-3 text-sm text-text-light">
@@ -48,7 +48,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3 text-sm text-text-light">
               <li><a href="https://www.instagram.com/rcrit?igsh=MWh3MW94OXl4bWU0bw==" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2"><InstagramIcon /> Instagram</a></li>
               <li><a href="https://www.linkedin.com/in/rotaract-club-of-rit-rcrit-604463190/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2"><LinkedinIcon /> LinkedIn</a></li>
-              <li><span className="flex items-center gap-2 hover:text-white transition-colors cursor-default"><Mail size={16} /> rotaract@ritchennai.edu.in</span></li>
+              <li><span className="flex items-center gap-2 hover:text-white transition-colors cursor-default break-all"><Mail size={16} className="shrink-0" /> rotaract@ritchennai.edu.in</span></li>
             </ul>
           </div>
         </div>
