@@ -46,6 +46,6 @@ next-env.d.ts
 *.pdf
 extract_images.py
 temp.html
-Events/
-Logos/
-PERANDORY/
+/Events/
+/Logos/
+/PERANDORY/
