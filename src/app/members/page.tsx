@@ -2,7 +2,11 @@ import React from "react";
 import prisma from "@/lib/prisma";
 
 export default async function MembersPage() {
-  const allMembers = await prisma.member.findMany();
+  const allMembers = await prisma.member.findMany({
+    orderBy: {
+      id: 'asc'
+    }
+  });
   const coreMembers = allMembers.filter(m => m.category === "CORE");
   const boardMembers = allMembers.filter(m => m.category === "BOARD");
 

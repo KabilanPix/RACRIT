@@ -2,6 +2,7 @@ import prisma from './src/lib/prisma';
 
 const members = [
   // CORE MEMBERS
+  { name: "Rtr. Aswin Pramoth A R", role: "Immediate Past President", category: "CORE" },
   { name: "Rtr. Hari Balaji", role: "President", category: "CORE" },
   { name: "Rtr. Rupesh S", role: "Secretary", category: "CORE" },
   { name: "Rtr. Manikanta", role: "Chief Sergeant At Arms", category: "CORE" },
