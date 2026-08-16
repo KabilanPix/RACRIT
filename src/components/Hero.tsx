@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const slogans = [
   "Service Before Self",
@@ -122,6 +123,36 @@ export default function Hero() {
             The Rotaract Club of Rajalakshmi Institute of Technology is sponsored by the Rotary Club of Chennai Gateway and functions under Rotary International District 3233 – Group 5. Dedicated to service, leadership, fellowship, and professional development, our club strives to create a meaningful impact through its initiatives.
           </motion.p>
         </div>
+
+        {/* Scroll Down Indicator */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={isLoaderDone ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
+          transition={{ duration: 1, ease: customEase, delay: 0.3 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 cursor-pointer z-20 group"
+          onClick={() => {
+            window.scrollTo({
+              top: window.innerHeight,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <span className="text-xs text-text-light/50 tracking-widest uppercase font-medium group-hover:text-text-light transition-colors duration-300">
+            Scroll Down
+          </span>
+          <motion.div
+            animate={{
+              y: [0, 5, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <ChevronDown className="w-5 h-5 text-text-light/60 group-hover:text-text-light transition-colors duration-300" />
+          </motion.div>
+        </motion.div>
       </section>
     </>
   );

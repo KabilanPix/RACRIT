@@ -6,7 +6,7 @@ export default function Watermarks() {
     <div className="bg-decor fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
       {/* Top Left - Hidden on mobile */}
       <div className="hidden md:block absolute top-[10vh] left-[5vw] w-[240px] h-[240px] opacity-[0.15] animate-float">
-        <Image src="/BG_1.png" alt="Decorative watermark 1" fill sizes="(max-width: 768px) 150px, 300px" className="object-contain grayscale" />
+        <Image src="/BG_1_new.png" alt="Decorative watermark 1" fill sizes="(max-width: 768px) 150px, 300px" className="object-contain grayscale" />
       </div>
 
       {/* Top Right */}

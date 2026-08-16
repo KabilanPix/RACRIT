@@ -70,6 +70,89 @@ The purpose of Anbudan Samayal, Manamudan Vazhangal 2.0 is to support underprivi
       "/events/asmv/gallery/asmv_photo_1.png",
       "/events/asmv/gallery/asmv_photo_2.jpeg"
     ]
+  },
+  {
+    slug: "punnagai",
+    title: "PUNNAGAI – Spreading Smiles & Celebrating Inclusion",
+    shortDescription: "A community service initiative aimed at bringing joy and inclusion to children with disabilities through interactive play and engagement.",
+    date: "17th July 2026 (11:00 AM – 02:00 PM)",
+    category: "Community Service",
+    posterImage: "/events/punnagai.png",
+    fullContent: `The Rotaract Club of Rajalakshmi Institute of Technology successfully organized "PUNNAGAI" on 17th July 2026 at the Wozniak Auditorium, RIT. This event was conducted as a Community Service initiative with a simple yet meaningful purpose—to bring smiles to the faces of children with disabilities through an engaging, joyful, and inclusive experience.
+
+The program welcomed nearly 150 children with disabilities to our campus for a day dedicated to joy, inclusion, and unforgettable memories. The true purpose of the event was to create smiles that would last beyond the day, ensuring each child left carrying not only a small gift but also a beautiful memory.
+
+The highlight of the event was an interactive activity titled "Flip the Cards." Children flipped cards one by one to find matching emoji pairs. Every successful match was met with cheerful applause, bright smiles, and a sense of achievement. As a token of appreciation, each matched emoji card was gifted to the participants, allowing them to take home a small reminder of their joyful moments.
+
+What made the event truly special were the emotions it created. The auditorium echoed with laughter, excitement, encouragement, and genuine happiness. Rotaractors stood beside every participant, cheering them on, celebrating every match, and ensuring that every child felt welcomed, appreciated, and included.
+
+For the members of the Rotaract Club of Rajalakshmi Institute of Technology, "PUNNAGAI" was a deeply humbling experience. Serving these wonderful children was a heartfelt reminder that true happiness is found in bringing happiness to others.
+
+**Purpose for Conducting:**
+* Create a joyful, inclusive experience for young students with disabilities.
+* Provide access to a medical check-up camp for participant health and wellness.
+* Encourage interaction between Rotaract members and the community they serve.
+* Strengthen the club's commitment to service, compassion, and inclusion.
+* Build community awareness through participation of local government representation.
+
+**Key Highlights:**
+* Welcomed nearly 150 children with disabilities to our campus for a day of joy.
+* Organized the interactive game "Flip the Cards" to build confidence and coordination.
+* Distributed emoji cards and gifts as tokens of appreciation.
+* Fostered empathy, compassion, and a spirit of volunteerism among Rotaractors.
+* Collaborated with local government representation to build broader community awareness.
+
+**Outcomes of the Event:**
+* Created a joyful and memorable experience for nearly 150 children.
+* Helped participants build confidence through engaging and interactive play.
+* Fostered meaningful connections between Rotaractors and the children.
+* Inspired volunteers by giving them the opportunity to experience the joy of selfless service.
+* Reinforced the values of kindness, compassion, inclusion, and "Service Above Self."`,
+    galleryPhotos: [
+      "/events/punnagai/gallery/punnagai_extracted_1.png",
+      "/events/punnagai/gallery/punnagai_extracted_3.png"
+    ]
+  },
+  {
+    slug: "unbox",
+    title: "UNBOX – The Black Box Failure Hack",
+    shortDescription: "A high-pressure technical debugging challenge designed to provide students with practical exposure to software failure analysis and systematic troubleshooting.",
+    date: "13th August 2026 (11:00 AM – 3:00 PM)",
+    category: "Professional Service",
+    posterImage: "/events/unbox.png",
+    fullContent: `The Rotaract Club of Rajalakshmi Institute of Technology successfully organized “UNBOX – The Black Box Failure Hack” on 13th August 2026 at C602, RIT. This event was organized as a technical debugging challenge with the purpose of developing practical problem-solving, analytical thinking, debugging, testing, and teamwork skills among students.
+
+The event witnessed a total participation of 160 members. Participants competed in two-member teams and were assigned individual Black Boxes containing hidden bugs, broken logic, and unexpected system failures. Teams were required to analyse their assigned systems, identify the failure, understand its root cause, implement an appropriate fix, and validate the repaired system.
+
+The challenge emphasized systematic debugging and encouraged participants to look beyond visible errors and understand the underlying reasons behind system failures. Participants were also required to document their working solution through a screen recording of the fixed Black Box. This added an additional layer of technical validation and required the teams to demonstrate that their repaired system was functioning correctly.
+
+The event created a competitive and engaging technical environment where participants had to make decisions under time constraints while working collaboratively with their teammates. It concluded with the recognition of the Top Three Winners and distribution of prizes in the presence of HoD Dr. Nirmala Priya.
+
+**Purpose for Conducting:**
+* Provide students with practical exposure to debugging and software troubleshooting.
+* Encourage systematic identification of software failures.
+* Develop root-cause analysis and analytical thinking.
+* Improve programming, testing, and validation skills.
+* Strengthen teamwork, communication, and decision-making under time constraints.
+
+**Key Highlights:**
+* Engaged 160 registered participants working collaboratively in two-member teams.
+* Challenged students to identify, debug, repair, and validate software failures in randomly assigned Black Boxes.
+* Promoted systematic thinking and root-cause analysis rather than relying solely on trial and error.
+* Distributed prizes to the Top Three Winners in the presence of HoD Dr. Nirmala Priya.
+
+**Outcomes of the Event:**
+* Improved practical debugging and troubleshooting abilities among participants.
+* Enhanced logical, analytical problem-solving, and root-cause analysis skills.
+* Improved teamwork and collaborative technical decision-making.
+* Provided hands-on experience in testing and validating repaired systems under time constraints.`,
+    galleryPhotos: [
+      "/events/unbox/gallery/unbox_extracted_1.jpg",
+      "/events/unbox/gallery/unbox_extracted_2.png",
+      "/events/unbox/gallery/unbox_extracted_3.jpg",
+      "/events/unbox/gallery/unbox_extracted_5.jpg",
+      "/events/unbox/gallery/unbox_extracted_6.png"
+    ]
   }
 ];
 

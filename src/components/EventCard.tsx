@@ -19,6 +19,7 @@ export default function EventCard({ event }: EventCardProps) {
             src={event.posterImage} 
             alt={event.title} 
             fill 
+            sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 280px"
             className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
           />
         </div>
