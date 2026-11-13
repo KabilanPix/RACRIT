@@ -213,6 +213,37 @@ The gathering offered members a comfortable avenue to interact beyond official p
     ]
   },
   {
+    slug: "burger-sapda-polama",
+    title: "BURGER SAPDA POLAMAAA?",
+    shortDescription: "A joyful fellowship afternoon at VR Chennai with burgers, fun group games, candid conversations, and friendship bonding.",
+    date: "6th September 2026 (01:00 PM – 03:00 PM)",
+    category: "Club Service",
+    posterImage: "/events/Burger sapda.png",
+    fullContent: `“Burger Sapda Polamaaa?”, organized by the Rotaract Club of Rajalakshmi Institute of Technology, was conducted on 6th September 2026 at VR Chennai from 1:00 PM to 3:00 PM as a casual and engaging fellowship initiative. The event brought 15 Rotaractors together for an afternoon filled with good food, fun activities, conversations, laughter, and memorable moments.
+
+The outing offered members a refreshing break from their usual academic schedules and club responsibilities. Meeting in a lively and comfortable mall atmosphere, members enjoyed delicious meals while participating in lighthearted group games and friendly banter.
+
+More than just a casual outing, “Burger Sapda Polamaaa?” created a relaxed space for Rotaractors to pause, unwind, and enjoy each other’s company. It proved that good food shared with genuine friends strengthens the bonds that make our Rotaract family united.
+
+The afternoon concluded with warm interactions, group selfies, and lasting smiles, proving that informal fellowship is at the heart of our club's vitality and team spirit.
+
+**Purpose for Conducting:**
+* Strengthen friendship, camaraderie, and interpersonal bonding among Rotaractors.
+* Encourage informal interaction, meaningful conversations, and mutual trust.
+* Provide a refreshing mental and social break from demanding academic routines.
+* Foster friendly competition and joyful team memories through shared food and games.
+* Strengthen the Rotaract family by building lasting friendships beyond project duties.
+
+**Key Highlights & Outcomes:**
+* 15 members actively participated in an engaging fellowship gathering at VR Chennai.
+* Enjoyed burgers and interactive games fostering laughter and togetherness.
+* Rejuvenated energy and reinforced an inclusive, supportive club culture.`,
+    galleryPhotos: [
+      "/events/burger-sapda-polama/gallery/burger_photo_0.jpeg",
+      "/events/burger-sapda-polama/gallery/burger_photo_1.jpeg"
+    ]
+  },
+  {
     slug: "vaazhvin-kural",
     title: "வாழ்வின் குரல் – Suicide Prevention & Mental Well-Being",
     shortDescription: "A grassroots community outreach and awareness initiative at Anna Nagar Tower Park focusing on suicide prevention and active listening.",
