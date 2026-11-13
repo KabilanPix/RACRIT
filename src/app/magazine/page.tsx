@@ -124,29 +124,6 @@ export default function MagazinePage() {
           ))}
         </div>
 
-        {/* Publication Notice */}
-        <div 
-          className="mt-20 p-6 sm:p-8 rounded-2xl bg-[#141417]/70 border border-white/10 backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-6"
-          data-aos="fade-up"
-        >
-          <div className="flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-accent/10 border border-accent/20 text-accent shrink-0">
-              <BookOpen className="w-6 h-6" />
-            </div>
-            <div>
-              <h2 className="text-lg font-bold text-white mb-1">
-                Looking for the digital reader or interactive PDF?
-              </h2>
-              <p className="text-sm text-text-light leading-relaxed">
-                Each monthly issue is compiled by the RAC RIT Editorial and Design Board. Click on any edition card to inspect the high-clarity cover or read online when links are active.
-              </p>
-            </div>
-          </div>
-          <div className="shrink-0 text-xs font-mono text-text-light/60 bg-black/40 px-4 py-2.5 rounded-lg border border-white/5">
-            Rotary Club of Chennai Gateway
-          </div>
-        </div>
-
       </div>
 
       {/* High-Clarity Lightbox / Modal */}
