@@ -61,7 +61,7 @@ export default function Stats() {
     {
       id: "events",
       label: "Events Conducted",
-      value: 4,
+      value: 11,
       suffix: "",
       icon: <Calendar className="w-8 h-8 text-accent" />,
       color: "from-green-500/20 to-emerald-500/5",
@@ -71,7 +71,7 @@ export default function Stats() {
     {
       id: "hours",
       label: "Man Hours Spent",
-      value: 193,
+      value: 485,
       suffix: " Hours",
       icon: <Clock className="w-8 h-8 text-purple-400" />,
       color: "from-purple-500/20 to-indigo-500/5",
@@ -81,7 +81,7 @@ export default function Stats() {
     {
       id: "beneficiaries",
       label: "Beneficiaries Impacted",
-      value: 690,
+      value: 825,
       suffix: "+",
       icon: <Users className="w-8 h-8 text-blue-400" />,
       color: "from-blue-500/20 to-cyan-500/5",
