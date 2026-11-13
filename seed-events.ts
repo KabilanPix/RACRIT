@@ -218,7 +218,7 @@ The gathering offered members a comfortable avenue to interact beyond official p
     shortDescription: "A joyful fellowship afternoon at VR Chennai with burgers, fun group games, candid conversations, and friendship bonding.",
     date: "6th September 2026 (01:00 PM – 03:00 PM)",
     category: "Club Service",
-    posterImage: "",
+    posterImage: "/events/burger-sapda-polama.png",
     fullContent: `“Burger Sapda Polamaaa?”, organized by the Rotaract Club of Rajalakshmi Institute of Technology, was conducted on 6th September 2026 at VR Chennai from 1:00 PM to 3:00 PM as a casual and engaging fellowship initiative. The event brought 15 Rotaractors together for an afternoon filled with good food, fun activities, conversations, laughter, and memorable moments.
 
 The outing offered members a refreshing break from their usual academic schedules and club responsibilities. Meeting in a lively and comfortable mall atmosphere, members enjoyed delicious meals while participating in lighthearted group games and friendly banter.

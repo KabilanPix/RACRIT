@@ -2,12 +2,12 @@ import prisma from './src/lib/prisma';
 
 const members = [
   // CORE MEMBERS
-  { name: "Rtr. Aswin Pramoth A R", role: "Immediate Past President", category: "CORE" },
-  { name: "Rtr. Hari Balaji", role: "President", category: "CORE" },
+  { name: "Rtr. IPP. Aswin Pramoth A R", role: "Immediate Past President", category: "CORE" },
+  { name: "Rtr. Hari Balaji R", role: "President", category: "CORE" },
   { name: "Rtr. Rupesh S", role: "Secretary", category: "CORE" },
   { name: "Rtr. Manikanta", role: "Chief Sergeant At Arms", category: "CORE" },
   { name: "Rtr. Danish Reddy", role: "Vice President", category: "CORE" },
-  { name: "Rtr. Sylvia Eden", role: "Treasurer", category: "CORE" },
+  { name: "Rtr. Sylvia Eden", role: "Treasurer", category: "BOARD" },
 
   // BOARD MEMBERS
   { name: "Rtr. Nishaanth", role: "Joint Secretary", category: "BOARD" },
@@ -28,7 +28,7 @@ const members = [
   { name: "Rtr. Aishwarya", role: "Content Creation Head", category: "BOARD" },
   { name: "Rtr. Vaishnavi", role: "Pro Team", category: "BOARD" },
   { name: "Rtr. Taara sri", role: "Editorial Team", category: "BOARD" },
-  { name: "Rtr. Sanjay", role: "Associate Treasurer", category: "BOARD" },
+  { name: "Rtr. Muthu", role: "Associate Treasurer", category: "BOARD" },
   { name: "Rtr. Joshvua", role: "Chief Employment Cell", category: "BOARD" },
   { name: "Rtr. Naveen", role: "Discipline Head", category: "BOARD" },
   { name: "Rtr. Satyanarayanaa", role: "Event Coordinator", category: "BOARD" }
