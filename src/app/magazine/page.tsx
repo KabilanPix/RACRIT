@@ -12,9 +12,7 @@ import {
   X, 
   ZoomIn, 
   ZoomOut, 
-  Info,
-  Layers,
-  Award
+  Info
 } from "lucide-react";
 
 export default function MagazinePage() {
@@ -74,17 +72,6 @@ export default function MagazinePage() {
           <p className="text-base sm:text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
             Reflections that inspire, projects that matter. Explore our monthly editions documenting leadership, service milestones, and unforgettable memories of the Rotaract Club of RIT.
           </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-xs sm:text-sm text-text-light/80">
-            <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/5">
-              <Layers className="w-4 h-4 text-purple-400" />
-              <span>4 Monthly Editions</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/5">
-              <Award className="w-4 h-4 text-amber-400" />
-              <span>Rotary District 3233 • Group 5</span>
-            </div>
-          </div>
         </div>
 
         {/* Filter and Sorting Controls */}
