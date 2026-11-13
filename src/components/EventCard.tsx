@@ -14,15 +14,27 @@ export default function EventCard({ event }: EventCardProps) {
       <div className="bg-[#1a1a1a]/60 backdrop-blur-xl transform-gpu rounded-2xl p-2 sm:p-4 transition-all duration-500 ease-out group-hover:-translate-y-1 sm:group-hover:-translate-y-2 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] border border-white/5 group-hover:border-white/20 relative overflow-hidden">
         
         {/* Poster Image Area */}
-        <div className="relative w-full aspect-[3/4] rounded-lg sm:rounded-xl mb-2 sm:mb-4 overflow-hidden bg-black/30 flex items-center justify-center">
-          <Image 
-            src={event.posterImage} 
-            alt={event.title} 
-            fill 
-            sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 280px"
-            className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
-          />
-        </div>
+        {event.posterImage && event.posterImage.trim() !== "" ? (
+          <div className="relative w-full aspect-[3/4] rounded-lg sm:rounded-xl mb-2 sm:mb-4 overflow-hidden bg-black/30 flex items-center justify-center">
+            <Image 
+              src={event.posterImage} 
+              alt={event.title} 
+              fill 
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 280px"
+              className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ) : event.galleryPhotos && event.galleryPhotos.length > 0 ? (
+          <div className="relative w-full aspect-[3/4] rounded-lg sm:rounded-xl mb-2 sm:mb-4 overflow-hidden bg-black/30 flex items-center justify-center">
+            <Image 
+              src={event.galleryPhotos[0]} 
+              alt={event.title} 
+              fill 
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 280px"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ) : null}
 
         {/* Text Details */}
         <div className="flex flex-col gap-0.5 sm:gap-1 text-white">

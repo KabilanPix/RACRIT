@@ -44,16 +44,18 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
       </Link>
       
       <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 lg:p-12 backdrop-blur-md shadow-2xl">
-        <div className="w-full mb-10">
-          <Image 
-            src={event.posterImage} 
-            alt={event.title} 
-            width={0} 
-            height={0} 
-            sizes="100vw" 
-            className="w-full h-auto rounded-xl border border-white/20 shadow-xl" 
-          />
-        </div>
+        {event.posterImage && event.posterImage.trim() !== "" && (
+          <div className="w-full mb-10">
+            <Image 
+              src={event.posterImage} 
+              alt={event.title} 
+              width={0} 
+              height={0} 
+              sizes="100vw" 
+              className="w-full h-auto rounded-xl border border-white/20 shadow-xl" 
+            />
+          </div>
+        )}
         
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3 mb-2">
