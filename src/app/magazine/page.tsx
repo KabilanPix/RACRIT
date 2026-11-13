@@ -7,7 +7,6 @@ import MagazineCard from "@/components/MagazineCard";
 import { 
   BookOpen, 
   Sparkles, 
-  ArrowUpDown, 
   ExternalLink, 
   X, 
   ZoomIn, 
@@ -16,29 +15,13 @@ import {
 } from "lucide-react";
 
 export default function MagazinePage() {
-  const [selectedMonth, setSelectedMonth] = useState<string>("ALL");
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc"); // asc = July -> Oct (chronological), desc = Oct -> July (latest)
   const [activePreview, setActivePreview] = useState<MagazineIssue | null>(null);
   const [isZoomed, setIsZoomed] = useState(false);
 
-  // Filter and sort the magazine editions
-  const filteredMagazines = useMemo(() => {
-    let list = [...magazines];
-
-    if (selectedMonth !== "ALL") {
-      list = list.filter((m) => m.month.toUpperCase() === selectedMonth);
-    }
-
-    list.sort((a, b) => {
-      return sortOrder === "asc"
-        ? a.monthIndex - b.monthIndex
-        : b.monthIndex - a.monthIndex;
-    });
-
-    return list;
-  }, [selectedMonth, sortOrder]);
-
-  const monthTabs = ["ALL", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER"];
+  // Chronological order (July -> October)
+  const sortedMagazines = useMemo(() => {
+    return [...magazines].sort((a, b) => a.monthIndex - b.monthIndex);
+  }, []);
 
   const handleOpenPreview = (issue: MagazineIssue) => {
     setActivePreview(issue);
@@ -74,47 +57,9 @@ export default function MagazinePage() {
           </p>
         </div>
 
-        {/* Filter and Sorting Controls */}
-        <div 
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-white/10"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          {/* Month Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 scrollbar-none">
-            {monthTabs.map((month) => {
-              const isActive = selectedMonth === month;
-              return (
-                <button
-                  key={month}
-                  onClick={() => setSelectedMonth(month)}
-                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all whitespace-nowrap cursor-pointer ${
-                    isActive
-                      ? "bg-accent text-dark shadow-lg shadow-accent/20 scale-105"
-                      : "bg-[#1a1a1a]/60 text-text-light hover:text-white hover:bg-white/10 border border-white/5"
-                  }`}
-                >
-                  {month === "ALL" ? "All Months" : month}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Sort Order Toggle */}
-          <button
-            onClick={() => setSortOrder(prev => prev === "asc" ? "desc" : "asc")}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-[#1a1a1a]/60 text-text-light hover:text-white border border-white/10 hover:border-white/20 transition-all cursor-pointer self-end sm:self-auto"
-          >
-            <ArrowUpDown className="w-4 h-4 text-accent" />
-            <span>
-              {sortOrder === "asc" ? "Chronological (Jul → Oct)" : "Latest First (Oct → Jul)"}
-            </span>
-          </button>
-        </div>
-
         {/* Magazine Editions Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
-          {filteredMagazines.map((issue, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch mt-8">
+          {sortedMagazines.map((issue, index) => (
             <MagazineCard
               key={issue.id}
               issue={issue}
