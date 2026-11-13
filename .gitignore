@@ -44,8 +44,10 @@ next-env.d.ts
 
 # Custom project ignores (Large raw files and temp scripts)
 *.pdf
+*.HEIC
 extract_images.py
 temp.html
 /Events/
 /Logos/
 /PERANDORY/
+/Magazines/
