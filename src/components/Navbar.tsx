@@ -25,11 +25,17 @@ export default function Navbar() {
         </Link>
       </div>
       
-      <nav className="hidden md:flex gap-10 text-sm font-medium text-text-light">
+      <nav className="hidden md:flex gap-8 lg:gap-10 text-sm font-medium text-text-light items-center">
         <Link href="/" className="hover:text-white transition-colors">HOME</Link>
         <Link href="/events" className="hover:text-white transition-colors">EVENTS</Link>
         <Link href="/members" className="hover:text-white transition-colors">MEMBERS LIST</Link>
         <Link href="/magazine" className="hover:text-white transition-colors">MAGAZINE</Link>
+        <Link 
+          href="/photo-contest" 
+          className="text-black bg-accent hover:bg-accent-hover font-semibold px-3 py-1.5 rounded-lg transition-all text-xs tracking-wide shadow-[0_0_15px_rgba(43,238,52,0.3)]"
+        >
+          📸 CONTEST
+        </Link>
       </nav>
       
       <div className="flex items-center gap-4 md:hidden">
@@ -58,6 +64,13 @@ export default function Navbar() {
           <Link href="/events" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors w-full">EVENTS</Link>
           <Link href="/members" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors w-full">MEMBERS LIST</Link>
           <Link href="/magazine" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors w-full">MAGAZINE</Link>
+          <Link 
+            href="/photo-contest" 
+            onClick={() => setIsOpen(false)} 
+            className="text-black bg-accent font-semibold px-4 py-2 rounded-xl transition-all text-center w-full text-base"
+          >
+            📸 PHOTO CONTEST
+          </Link>
         </div>
       </div>
     </header>
