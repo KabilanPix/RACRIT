@@ -41,14 +41,16 @@ export default function PhotographyHero() {
       <div className="max-w-5xl mx-auto z-10 flex flex-col items-center">
         {/* Event Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6 shadow-inner">
-          <Sparkles className="w-4 h-4" /> Official Online Photography Contest
+          <Sparkles className="w-4 h-4" /> The UNSEEN • Online Photography Contest
         </div>
 
         {/* Title */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-          Capture the Story <br />
-          <span className="bg-gradient-to-r from-accent via-emerald-400 to-cyan-400 bg-clip-text text-transparent font-perandory text-5xl sm:text-7xl md:text-8xl">
-            Behind the Lens
+          <span className="font-perandory tracking-wider text-5xl sm:text-7xl md:text-8xl block mb-2">
+            The UNSEEN
+          </span>
+          <span className="bg-gradient-to-r from-accent via-emerald-400 to-cyan-400 bg-clip-text text-transparent text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-normal">
+            Capture the Story Behind the Lens
           </span>
         </h1>
 

@@ -4,8 +4,8 @@ import EventGuidelines from "@/components/photography/EventGuidelines";
 import SubmissionForm from "@/components/photography/SubmissionForm";
 
 export const metadata = {
-  title: "Online Photography Contest | RACRIT",
-  description: "Participate in the official RACRIT Online Photography Competition. Share your photograph and the story behind it.",
+  title: "The UNSEEN - Online Photography Contest | RACRIT",
+  description: "Participate in 'The UNSEEN' - Official RACRIT Online Photography Competition. Share your photograph and the story behind it.",
 };
 
 export default function PhotoContestPage() {

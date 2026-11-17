@@ -34,7 +34,7 @@ export default function Navbar() {
           href="/photo-contest" 
           className="text-black bg-accent hover:bg-accent-hover font-semibold px-3 py-1.5 rounded-lg transition-all text-xs tracking-wide shadow-[0_0_15px_rgba(43,238,52,0.3)]"
         >
-          📸 CONTEST
+          📸 THE UNSEEN
         </Link>
       </nav>
       
@@ -69,7 +69,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)} 
             className="text-black bg-accent font-semibold px-4 py-2 rounded-xl transition-all text-center w-full text-base"
           >
-            📸 PHOTO CONTEST
+            📸 THE UNSEEN
           </Link>
         </div>
       </div>

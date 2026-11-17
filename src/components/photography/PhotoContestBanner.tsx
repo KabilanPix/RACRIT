@@ -13,7 +13,7 @@ export default function PhotoContestBanner() {
           <Camera className="w-3.5 h-3.5" />
         </span>
         <span>
-          📸 <span className="font-bold text-accent">Photography Competition is Live!</span> Submit your entry before Nov 30
+          📸 <span className="font-bold text-accent">The UNSEEN Photography Contest is Live!</span> Submit your entry before Nov 30
         </span>
         <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
       </Link>
