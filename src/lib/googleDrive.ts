@@ -14,8 +14,7 @@ export async function uploadPhotoToDrive(file: File, participantName: string, cl
   // Use OAuth2 user delegation so uploads use your personal 15 GB quota
   const oauth2Client = new google.auth.OAuth2(
     clientId,
-    clientSecret,
-    "https://developers.google.com/oauthplayground"
+    clientSecret
   );
 
   oauth2Client.setCredentials({
