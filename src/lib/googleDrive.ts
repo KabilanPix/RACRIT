@@ -2,24 +2,27 @@ import { google } from "googleapis";
 import { Readable } from "stream";
 
 export async function uploadPhotoToDrive(file: File, participantName: string, clubCollegeName: string) {
-  const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
-  let privateKey = process.env.GOOGLE_PRIVATE_KEY;
+  const clientId = process.env.GOOGLE_CLIENT_ID;
+  const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
+  const refreshToken = process.env.GOOGLE_REFRESH_TOKEN;
   const folderId = process.env.GOOGLE_DRIVE_FOLDER_ID;
 
-  if (!clientEmail || !privateKey || !folderId) {
-    throw new Error("Google Drive API configuration is missing in environment variables.");
+  if (!clientId || !clientSecret || !refreshToken || !folderId) {
+    throw new Error("Google Drive OAuth configuration is missing in environment variables.");
   }
 
-  // Handle formatted \n characters in private key string
-  privateKey = privateKey.replace(/\\n/g, "\n");
+  // Use OAuth2 user delegation so uploads use your personal 15 GB quota
+  const oauth2Client = new google.auth.OAuth2(
+    clientId,
+    clientSecret,
+    "https://developers.google.com/oauthplayground"
+  );
 
-  const auth = new google.auth.JWT({
-    email: clientEmail,
-    key: privateKey,
-    scopes: ["https://www.googleapis.com/auth/drive"],
+  oauth2Client.setCredentials({
+    refresh_token: refreshToken,
   });
 
-  const drive = google.drive({ version: "v3", auth });
+  const drive = google.drive({ version: "v3", auth: oauth2Client });
 
   // Clean filename: participantName_clubCollege_timestamp.ext
   const extension = file.name.split(".").pop() || "jpg";
