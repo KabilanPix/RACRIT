@@ -1,51 +1,107 @@
 import React from "react";
-import { CheckCircle, ShieldAlert, Sparkles, FileText } from "lucide-react";
+import { 
+  Users, 
+  Camera, 
+  Sparkles, 
+  FileText, 
+  Ban, 
+  CalendarCheck, 
+  Gavel 
+} from "lucide-react";
 
 export default function EventGuidelines() {
-  const guidelines = [
+  const rules = [
     {
-      title: "Theme & Story",
-      description: "Submit a photograph along with the genuine story behind it — the moment, thought, or emotion that made you choose this photo.",
-      icon: <Sparkles className="w-6 h-6 text-accent" />,
+      num: "01",
+      title: "Open Eligibility",
+      description: "Participation is open to all members of colleges and Rotaract clubs.",
+      icon: <Users className="w-5 h-5 text-accent" />,
+      accent: "border-accent/20 hover:border-accent/50",
     },
     {
-      title: "One Submission Per Person",
-      description: "Each participant can submit 1 photograph. Submissions are strictly verified via your email address.",
-      icon: <CheckCircle className="w-6 h-6 text-blue-400" />,
+      num: "02",
+      title: "Single Entry",
+      description: "Submit only ONE original photograph and ONE accompanying story.",
+      icon: <Camera className="w-5 h-5 text-blue-400" />,
+      accent: "border-blue-500/20 hover:border-blue-500/50",
     },
     {
-      title: "File Limits",
-      description: "Upload any standard image format (JPEG, PNG, HEIC, etc.) up to 15 MB in size. High resolution is recommended.",
-      icon: <FileText className="w-6 h-6 text-purple-400" />,
+      num: "03",
+      title: "Meaningful Subject",
+      description: "The selected object must have personal, cultural, or historical significance.",
+      icon: <Sparkles className="w-5 h-5 text-purple-400" />,
+      accent: "border-purple-500/20 hover:border-purple-500/50",
     },
     {
-      title: "Originality & Integrity",
-      description: "Photographs must be your original work. Plagiarism or stock photos will lead to immediate disqualification.",
-      icon: <ShieldAlert className="w-6 h-6 text-amber-400" />,
+      num: "04",
+      title: "Story Length",
+      description: "The story must be 100–150 words, explaining the object's significance.",
+      icon: <FileText className="w-5 h-5 text-emerald-400" />,
+      accent: "border-emerald-500/20 hover:border-emerald-500/50",
+    },
+    {
+      num: "05",
+      title: "Authenticity First",
+      description: "AI-generated, watermarked, or heavily manipulated photographs are not permitted.",
+      icon: <Ban className="w-5 h-5 text-rose-400" />,
+      accent: "border-rose-500/20 hover:border-rose-500/50",
+    },
+    {
+      num: "06",
+      title: "Submission Deadline",
+      description: "Submit entries through the official submission form on or before 30 November 2026.",
+      icon: <CalendarCheck className="w-5 h-5 text-amber-400" />,
+      accent: "border-amber-500/20 hover:border-amber-500/50",
+    },
+    {
+      num: "07",
+      title: "Judges' Decision",
+      description: "The judges' decision shall be final and binding, and no arguments or appeals will be entertained.",
+      icon: <Gavel className="w-5 h-5 text-cyan-400" />,
+      accent: "border-cyan-500/20 hover:border-cyan-500/50",
     },
   ];
 
   return (
     <section className="w-full py-16 px-4 md:px-8 max-w-6xl mx-auto">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Guidelines & Rules</h2>
+      {/* Header with clean pill badge */}
+      <div className="text-center mb-14">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-text-light text-xs font-semibold tracking-wider uppercase mb-3">
+          Guidelines
+        </div>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">
+          Rules & Regulations
+        </h2>
         <p className="text-text-light max-w-xl mx-auto text-sm sm:text-base">
-          Please review the competition rules before uploading your photograph.
+          Please review the official competition criteria before submitting your entry.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {guidelines.map((rule, idx) => (
+      {/* Grid of Rule Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {rules.map((rule, idx) => (
           <div
             key={idx}
-            className="bg-[#1a1a1a]/40 backdrop-blur-xl border border-white/5 hover:border-white/20 rounded-2xl p-6 sm:p-8 flex items-start gap-4 transition-all duration-300"
+            className={`bg-[#151515]/70 backdrop-blur-xl border rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] ${rule.accent} ${idx === 6 ? 'md:col-span-2 lg:col-span-3 lg:max-w-xl lg:mx-auto w-full' : ''}`}
           >
-            <div className="p-3 rounded-xl bg-white/5 border border-white/5 shrink-0">
-              {rule.icon}
-            </div>
             <div>
-              <h3 className="text-lg font-bold text-white mb-1">{rule.title}</h3>
-              <p className="text-sm text-text-light leading-relaxed">{rule.description}</p>
+              {/* Top Row: Icon & Rule Number */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+                  {rule.icon}
+                </div>
+                <span className="text-xs font-mono font-semibold text-text-light/40">
+                  {rule.num}
+                </span>
+              </div>
+
+              {/* Title & Description */}
+              <h3 className="text-base sm:text-lg font-bold text-white mb-2">
+                {rule.title}
+              </h3>
+              <p className="text-sm text-text-light/90 leading-relaxed">
+                {rule.description}
+              </p>
             </div>
           </div>
         ))}

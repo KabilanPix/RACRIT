@@ -190,19 +190,31 @@ export default function SubmissionForm() {
 
           {/* Theme Story */}
           <div>
-            <label className="block text-sm font-semibold text-text-light mb-2">
-              The Story Behind the Photo <span className="text-accent">*</span>
-            </label>
+            <div className="flex items-center justify-between mb-2">
+              <label className="block text-sm font-semibold text-text-light">
+                The Story Behind the Photo <span className="text-accent">*</span>
+              </label>
+              <span className={`text-xs font-mono ${
+                (() => {
+                  const words = formData.story.trim() === "" ? 0 : formData.story.trim().split(/\s+/).length;
+                  if (words === 0) return "text-text-light/50";
+                  if (words >= 100 && words <= 150) return "text-accent font-semibold";
+                  return "text-amber-400";
+                })()
+              }`}>
+                {formData.story.trim() === "" ? 0 : formData.story.trim().split(/\s+/).length} / 100–150 words
+              </span>
+            </div>
             <p className="text-xs text-text-light/60 mb-2">
-              Share the one story or moment that made you choose to capture and upload this image.
+              Explain the personal, cultural, or historical significance of the object in 100–150 words.
             </p>
             <textarea
               name="story"
               required
-              rows={4}
+              rows={5}
               value={formData.story}
               onChange={handleInputChange}
-              placeholder="Tell us what this photograph represents..."
+              placeholder="Write your 100–150 word story explaining the object's personal, cultural or historical significance..."
               className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors placeholder:text-neutral-600 text-sm resize-none"
             />
           </div>
